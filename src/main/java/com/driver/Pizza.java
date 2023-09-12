@@ -38,7 +38,7 @@ public class Pizza {
            price = price + 70;
        }
        else {
-           price = price + 80;
+           price = price + 120;
        }
         extraTopping=true;
     }
