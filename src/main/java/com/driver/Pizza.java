@@ -42,43 +42,44 @@ public class Pizza {
        else {
            price = price + 80;
        }
-        this.extraTopping=true;
+        extraTopping=true;
     }
 
   public void addTakeaway(){
         // your code goes here
         if(paperBag==true) return;
-        price=price+20;
+          price=price+20;
+          paperBag=true;
     }
 
     public String getBill(){
         // your code goes here
         if(isVeg=true) {
-            bill = "Base Price Of The Pizza:300\n";
+            bill = "Base Price Of The Pizza: 300\n";
         }
         else {
-            bill = "Base Price Of The Pizza:400\n";
+            bill = "Base Price Of The Pizza: 400\n";
         }
 
         if(extraCheese==true) {
-            bill = bill + "Extra Cheese Added:80\n";
+            bill = bill + "Extra Cheese Added: 80\n";
         }
 
         if(extraTopping==true) {
             if (isVeg == true) {
-                bill = bill +"Extra Toppings Added:70\n";
+                bill = bill +"Extra Toppings Added: 70\n";
             } else {
-                bill = bill+"Extra Toppings Added:120\n";
+                bill = bill+"Extra Toppings Added: 120\n";
             }
         }
 
         if(paperBag=true) {
-            bill = bill + "Paperbag Added:20\n";
+            bill = bill + "Paperbag Added: 20\n";
         }
 
-        String totalprice=Integer.toString(price);
+        String totalPrice=Integer.toString(price);
 
-        bill=bill+="Total Price:"+totalprice+"\n";
+        bill=bill+"Total Price:" + totalPrice + "\n";
         return this.bill;
     }
 }
