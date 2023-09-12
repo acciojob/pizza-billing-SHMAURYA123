@@ -49,16 +49,16 @@ public class Pizza {
             price = price + 120;
         }
         extraToppings = true;
-
-
-    }
+}
 
     public void addTakeaway(){
         // your code goes here
         if(paperBag == true){
             return;
         }
-        price = price + 20;
+        if(isVeg) {
+            price = price + 20;
+        }
         paperBag = true;
     }
 
@@ -83,7 +83,9 @@ public class Pizza {
         }
 
         if(paperBag == true){
-            bill = bill + "Paperbag Added:20\n";
+            if(isVeg) {
+                bill = bill + "Paperbag Added:20\n";
+            }
         }
 
         String totalPrice = Integer.toString(price);
