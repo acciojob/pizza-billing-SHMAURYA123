@@ -31,8 +31,6 @@ public class Pizza {
          price=price+80;
          this.extraCheese=true;
         }
-
-
     public void addExtraToppings(){
         // your code goes here
         if(this.extraTopping==true) return;
@@ -44,8 +42,7 @@ public class Pizza {
        }
         extraTopping=true;
     }
-
-  public void addTakeaway(){
+    public void addTakeaway(){
         // your code goes here
         if(paperBag==true) return;
           price=price+20;
@@ -79,7 +76,7 @@ public class Pizza {
 
         String totalPrice=Integer.toString(price);
 
-        bill=bill+"Total Price:" + totalPrice + "\n";
+        bill=bill+ "Total Price: " + totalPrice + "\n";
         return this.bill;
     }
 }
